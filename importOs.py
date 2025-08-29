@@ -14,8 +14,10 @@ def main():
     file_path = os.path.join(base_dir,f"{file_name}.{file_type}").replace("\\", "/")
     #print(file_path)
     #open the file for reading
-    with open(file_path, "r") as f:
+    #if file is a pdf then "rb" and "wb"
+    with open(file_path, "w") as f:
         print("filepath ->", file_path)
-        #f.write(f"This is {file_name}.{file_type} created in {base_dir}\n")
+        f.write(f"This is {file_name}.{file_type} created in {base_dir}\n")
 if __name__ == "__main__":
     main()
+
